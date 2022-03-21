@@ -1,0 +1,33 @@
+/* Split */
+
+	.split:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+
+	.split > * {
+		float: left;
+	}
+
+/* Spotlight */
+
+	.spotlight:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+
+	.spotlight .image {
+		float: left;
+	}
+
+	.spotlight .content {
+		float: left;
+	}
+
+/* Banner */
+
+	#banner {
+		background: #4A4771;
+	}
