@@ -1,1 +1,1 @@
-PhoenixBuilder/README-cn.md
+PhoenixBuilder/cdocs/README-cn.md
