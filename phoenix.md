@@ -70,11 +70,12 @@ That's all for the completion of necessary informations, and the following conte
 
 - iOS: Install the package from our APT package source.
 
-- Linux x86_64 (recommended platform): 
+- Linux (recommended platform): 
 
   ```shell
-  wget -O fastbuilder https://storage.fastbuilder.pro/epsilon/phoenixbuilder
-  chmod +x fastbuilder
+  # This command also applicable for other *nix platforms (iOS, macOS, Android, etc.).
+  # For install/upgrade
+  bash -c "$(curl -fsSL https://storage.fastbuilder.pro/install.sh)"
   ```
 
 - Android: 
@@ -83,15 +84,7 @@ That's all for the completion of necessary informations, and the following conte
 
   - b. After the installation of Termux, navigate to your system configuration, and give it **the permission of accessing the storage space (aka sdcard)**, and allow it to **run in the background without limitations**.
 
-   - c. Download the FastBuilder binary. (x86 or x86_64 android devices are not supported.)
-
-     > **Note: This step (c) is also the way of upgrading FastBuilder Phoenix, execute this step directly to upgrade FastBuilder afterwards.**
-
-     ```shell
-     o=$(uname -o) a=$(uname -m) && if [ "$o" == "Android" ]; then [[ "$a" == "aarch64" ]] && f="arm64" || f="armv7" && curl -o fastbuilder https://storage.fastbuilder.pro/phoenixbuilder-android-executable-$f && chmod +x fastbuilder && ./fastbuilder; else echo "for Android only"; fi
-     
-     ```
-     **Thanks [@CMA2401PT](https://github.com/CMA2401PT) for providing the easier version of the download command for fastbuilder.**
+   - c. Follow the same step with Linux, download the FastBuilder binary or package. (x86 or x86_64 Android devices may not supported in future.)
 
 ### Usage
 
@@ -112,7 +105,7 @@ FastBuilder Phoenix is a pure command line program ~~without complicated GUI~~, 
 - Android: Open the Termux app and execute the following command:
 
   ```shell
-  ./fastbuilder
+  fastbuilder
   ```
 
 #### Initialization
