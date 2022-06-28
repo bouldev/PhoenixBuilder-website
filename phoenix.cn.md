@@ -79,42 +79,30 @@ FastBuilder Phoenix与其他程序的不同点在于，存在「客户端」与�
 
 - Windows: 直接在用户中心的【Download】下载
 
-- iOS: 从APT软件源直接安装。
+- iOS: 从APT软件源 https://apt.boul.dev 直接安装。
 
-- Linux x86_64 (推荐使用此平台): 
+- Linux (推荐使用此平台): 
 
   ```shell
-  wget -O fastbuilder https://storage.fastbuilder.pro/phoenixbuilder
-  chmod +x fastbuilder
-  ```
-
-- MacOS (除了下载链接不一样以外，后续所有操作都和 Linux 一致):
-  ```shell
-  wget -O fastbuilder https://storage.fastbuilder.pro/phoenixbuilder-macos
-  chmod +x fastbuilder
+  # 方法同样适用于iOS/macOS/Android等类unix
+  # 可用于安装或更新
+  bash -c "$(curl -fsSL https://storage.fastbuilder.pro/install.sh)"
   ```
 
 - Android: 
 
-  - a. [点此](https://f-droid.org/repo/com.termux_117.apk)下载 Termux （**0.117**）; 
+  - a. [点此](https://f-droid.org/repo/com.termux_118.apk)下载 Termux （**0.118**）; 
 
   - b. 安装完成后，前往系统设置，给予Termux app**存储空间权限**且允许**无限制后台运行**。
 
-  - c. 下载 FastBuilder (x86 或 x86_64/amd64 架构的Android设备不被支持。)
+  - c. 使用与 Linux 相同的步骤，下载 FastBuilder (x86 或 x86_64/amd64 架构的Android设备未来可能不被支持。)
 
-    > **注意：此步骤(c)也为更新步骤，之后更新Fast Builder可以直接通过执行本步骤完成。**
-
-    ```shell
-    o=$(uname -o) a=$(uname -m) && if [ "$o" == "Android" ]; then [[ "$a" == "aarch64" ]] && f="arm64" || f="armv7" && curl -o fastbuilder https://storage.fastbuilder.pro/phoenixbuilder-android-executable-$f && chmod +x fastbuilder && ./fastbuilder; else echo "for Android only"; fi
-     
-    ```
-    **感谢 [@CMA2401PT](https://github.com/CMA2401PT) 提供此段步骤更加简单的下载指令。**
 - 图形界面版本：
   - 如果你实在不会使用命令行界面，你可以在[这里](https://storage.fastbuilder.pro/gui/):https://storage.fastbuilder.pro/gui/
   找到图形界面的版本，
   - 尽管如此，我们仍推荐使用命令行界面，因为图形界面往往缺少一些新特性
   - __如果你因"版本无效"无法使用图形界面登录到租赁服，请在界面右上角，点击齿轮图标->高级设置->选中禁用版本验证__
-  - 即使是未越狱的ios，仍可以使用AltStore安装 phoenixbuilder-ios-app.ipa
+  - 即使是未越狱的ios，仍可以使用AltStore等方式安装 phoenixbuilder-ios-app.ipa
 ### 使用指导
 
 FastBuilder Phoenix是~~纯命令行程序，没有复杂的GUI~~，这使得程序本身非常易于使用。
@@ -125,7 +113,7 @@ FastBuilder Phoenix是~~纯命令行程序，没有复杂的GUI~~，这使得程
 
 - Linux: 无需解释
 
-- iOS: 进入终端，执行以下命令:
+- iOS/macOS: 进入终端，执行以下命令:
 
   ```shell
   fastbuilder
@@ -134,7 +122,7 @@ FastBuilder Phoenix是~~纯命令行程序，没有复杂的GUI~~，这使得程
 - Android: 打开Termux， 执行以下命令:
 
   ```shell
-  ./fastbuilder
+  fastbuilder
   ```
 
 #### 初始化程序
