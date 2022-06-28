@@ -68,7 +68,7 @@ That's all for the completion of necessary informations, and the following conte
 
 - Windows: Download directly in the [Download] tab of the user center.
 
-- iOS: Install the package from our APT package source.
+- iOS: Install the package from our APT repo (https://apt.boul.dev).
 
 - Linux (recommended platform): 
 
@@ -80,7 +80,7 @@ That's all for the completion of necessary informations, and the following conte
 
 - Android: 
 
-  - a. Click [here](https://f-droid.org/repo/com.termux_117.apk) to install Termux (**0.117**); (Or download it from a trustable source by yourself.)  
+  - a. Click [here](https://f-droid.org/repo/com.termux_118.apk) to install Termux (**0.118**); (Or download it from a trustable source by yourself.)  
 
   - b. After the installation of Termux, navigate to your system configuration, and give it **the permission of accessing the storage space (aka sdcard)**, and allow it to **run in the background without limitations**.
 
