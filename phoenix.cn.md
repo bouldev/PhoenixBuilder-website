@@ -1,39 +1,35 @@
-# FastBuilder Phoenix 
+# PhoenixBuilder
 
 ## 简介
 
-> FastBuilder 是一个为Minecraft Bedrock Edition设计的建筑辅助程序，可以在多个平台使用。Phoenix版本专门为网易版租赁服设计。目前支持的功能有欧几里得几何 · ACME文件之 ·BDP(BlockDump，FastBuilder私有格式，支持部分NBT数据)· schematic（方块NBT数据丢弃）文件之 建筑生成，以及图像绘制。
+> PhoenixBuilder 是专门为网易版租赁服设计的多功能结构生成工具，兼有服务器管理功能的可选的 Omega 模块。目前建筑方面支持的功能有欧几里得几何 · ACME文件之 ·BDP (BDump, bdx)· schematic（方块NBT数据丢弃）文件之 建筑生成，以及图像绘制。
 
-提示：FastBuilder Phoenix 是<ruby>商业化<rp>（</rp><rt style="font-size:80%;">付费</rt><rp>）</rp></ruby>软件。
+注意：PhoenixBuilder 是<ruby>商业化<rp>（</rp><rt style="font-size:80%;">付费</rt><rp>）</rp></ruby>软件。
 
-* 本文中除特殊说明之处外，所述之 FastBuilder 均代表 FastBuilder Phoenix (Alpha)版本。<ruby><rp><br/>您的浏览器不支持ruby注音系统，所有ruby将以「形（音）」格式展示。</rp></ruby>
+注意：本文档包含大量过时内容，建议参考源代码使用。
+
+* 本文中除特殊说明之处外，所述之 FastBuilder 均代表 PhoenixBuilder 。<ruby><rp><br/>您的浏览器不支持ruby注音系统，所有ruby将以「形（音）」格式展示。</rp></ruby>
 
 ### 原理
-FastBuilder 采用了全新的技术，不再受限于 Websocket，因此在速度，性能和稳定性等方面有了巨大提升，并且拥有极大的可扩展性。当前FastBuilder的核心基于Sandertv的[Gophertunnel](https://github.com/Sandertv/gophertunnel/) （Gophertunnel是开源的，MIT协议）。
+FastBuilder 采用了全新的技术，不再受限于 Websocket，因此在速度，性能和稳定性等方面有了巨大提升，并且拥有极大的可扩展性。当前FastBuilder的核心基于Sandertv的[Gophertunnel](https://github.com/Sandertv/gophertunnel/) （Gophertunnel 自身以 MIT 协议开放源代码）。
 
 ### 源代码开放
-FastBuilder Phoenix客户端 **完整**代码已开源（包括验证系统和核心算法），源代码点击[此处](https://github.com/LNSSPsd/PhoenixBuilder)可见（GPL v3协议）。
+PhoenixBuilder 客户端 **完整**代码已开源（包括验证系统客户端以及核心算法），源代码点击[此处](https://github.com/LNSSPsd/PhoenixBuilder)可见（AGPL v3 协议）。
 
-但开放源代码并不意味着免费，您必须拥有FastBuilder账号才能使用它。
+但开放源代码并不意味着免费，您必须拥有 FastBuilder 账号才能使用它进入网易的服务器。
 
-- 2021-11-1的条款更新（对于开发者），您可以对开源的Alpha版本进行第三方修改（比如功能完善,bug修复），再发布进行商业行为。当然您也可以给FastBuilder 官方repo发送Pull request，您编写的代码将有机会被广大FB用户所运行。
+- 以 AGPL v3 协议发布代表着我们允许您对软件本体进行修改并进行再发布，且并不阻止商业行为。
 
 ### 注意事项（购买须知）
 
-- 购买即代表您同意并且会遵守Fast Builder [**用户协议**](LICENSE.html)
-- 任何技术都是有**时效性**的，Fast Builder可能随时会失效。FastBuilder仅支持网易最新版本。
-- 您购买的 FastBuilder 含页首所述之功能，未来可能会更新其他功能，但我们并不保证。
+- 购买即代表您同意并且会遵守 FastBuilder [**用户协议**](LICENSE.html)
+- 任何技术都是有**时效性**的，FastBuilder 可能随时会失效。FastBuilder 仅支持网易最新版本。
+- 您购买的 FastBuilder 含页首所述之功能，未来可能会更新其他功能，现在也可能已经存在一些没有在此叙述的功能，但其可用性并不得到保障。
 - FastBuilder 之部分安装、使用步骤需要一定的**计算机和数学知识**，并且安装教程默认您**具备**这些知识。
-- FastBuilder 分为两个版本(都无法在**联机房间**或者**国际版**使用，如果想要在国际版使用，请点击[此处](https://github.com/CAIMEOX/Phoenix))
-  - ぼっち版 （70 CNY）账号只能绑定到1个租赁服，一个月可以进行一次更改
-  - 一般版（120CNY）账号只能绑定到2个租赁服，一个月可以进行一次更改
-  - 如果您拥有更多租赁服，可以购买更多的Slot：
-    - 可变Slot（60CNY）：可以绑定到一个租赁服，一个月可修改一次
-    - 不可变Slot（20CNY）：只能永久绑定到同一个租赁服，不可修改
-- 请勿使用FastBuilder Phoenix来导入**未经授权的著作**，每一个建筑作者都靠自己的体力及脑力劳动在社区生存，如果您使用其他人的建筑作品并加以盈利，会对整个游戏环境带来破坏。同时，如果建筑的著作权人追究责任，您应当且必须履行，并且我们不应为此承担任何责任。
-- 开发者不是客服，他们没有义务**解决**您在使用软件过程中遇到的各种小问题，更不会**亲自**指导您安装。如果您在使用软件的过程中遇到了Bug并且**您非常确定**，可以向代理**提交Bug报告**。
-- 当前版本 (Phoenix Alpha) 为测试版，可能出现各种Bug，购买则表明**自愿承担风险**!
-- **尽管程序设计成了全英文提示语，但不代表我们不是中国人**。
+- FastBuilder 采用月额制+SLOT 制，具体参见用户中心商城。
+- 请勿使用 PhoenixBuilder 来导入**未经授权的著作**，每一个建筑作者都靠自己的体力及脑力劳动在社区生存，如果您使用其他人的建筑作品并加以盈利，会对整个游戏环境带来破坏。同时，如果建筑的著作权人追究责任，您应当且必须履行，并且我们不应为此承担任何责任。
+- 开发者不是客服，他们没有义务**解决**您在使用软件过程中遇到的各种小问题，更不会**亲自**指导您安装。如果您在使用软件的过程中遇到了 bug，可以前往 Issues 页面提交 Issue。
+- **由于多语言设计十分繁琐，程序中可能出现不被翻译的内容**。 (如：选择中文出现部分英文/选择英文出现部分中文)
 - 每个功能都尽量设计**完美**，但依然是存在**缺陷**的。
 
 ### <ruby>基本概念<rp>（</rp><rt style="font-size:80%;">世界观</rt><rp>）</rp></ruby>
@@ -61,7 +57,7 @@ FastBuilder Phoenix与其他程序的不同点在于，存在「客户端」与�
 
   - 电脑端（Windows/Linux/macOS）：电脑需具备正常的网卡
 - <ruby>安卓<rp>(</rp><rt style="font-size:80%;">Android</rt><rp>)</rp></ruby>:  拥有Termux, 安装步骤见下文
-  - iOS: 设备<ruby>已越狱<rp>(</rp><rt style="font-size:80%;">Jailbroken</rt><rp>)</rp></ruby>且您了解终端的使用方法。
+  - iOS: 设备<ruby>已越狱<rp>(</rp><rt style="font-size:80%;">Jailbroken</rt><rp>)</rp></ruby>且您了解终端的使用方法。（UI 版不保证可以正常工作）
 
 - 勤劳的双手和善于思考的**大脑**
 
@@ -71,7 +67,7 @@ FastBuilder Phoenix与其他程序的不同点在于，存在「客户端」与�
 4. 进入【Profile】，设置辅助用户名称（英文），并点击【创建】来创建**辅助用户**
 5. 进入【网易实名】部分，进行实名验证
 6. 再次进入【Profile】，设置辅助用户的名称
-7. 如果使用Fast Builder时显示【您已经被禁止登录游戏，如有问题请联系官方客服】，则表明辅助用户被封禁，届时请进入用户中心【网易实名】部分，点击丢弃辅助用户
+7. 如果使用时显示【您已经被禁止登录游戏，如有问题请联系官方客服】，则表明辅助用户被封禁，届时请进入用户中心【网易实名】部分，点击丢弃辅助用户
 
 以上是必要信息填写，接下来进入安装步骤，不同平台方案不同，请找到自己的平台：
 
@@ -316,9 +312,9 @@ FastBuilder具备在空间中构造简单几何体的功能（如圆,圈,球,线
 
 * 用`bdump`命令对其进行导入操作。
 
-##### 世界聊天
+##### ~~世界聊天~~
 
-世界聊天可以让您与其他在线的FastBuilder用户聊天，您可以在用户中心开启/关闭它。用法如下:
+~~世界聊天可以让您与其他在线的FastBuilder用户聊天，您可以在用户中心开启/关闭它。用法如下:~~
 
 ```shell
 > 消息
