@@ -22,7 +22,7 @@ PhoenixBuilder 客户端 **完整**代码已开源（包括验证系统客户端
 
 ### 注意事项（购买须知）
 
-- 购买即代表您同意并且会遵守 FastBuilder [**用户协议**](LICENSE.html)
+- 购买即代表您同意并且会遵守 FastBuilder [**用户协议**](enduser-license.html)
 - 任何技术都是有**时效性**的，FastBuilder 可能随时会失效。FastBuilder 仅支持网易最新版本。
 - 您购买的 FastBuilder 含页首所述之功能，未来可能会更新其他功能，现在也可能已经存在一些没有在此叙述的功能，但其可用性并不得到保障。
 - FastBuilder 之部分安装、使用步骤需要一定的**计算机和数学知识**，并且安装教程默认您**具备**这些知识。
