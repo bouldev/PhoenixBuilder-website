@@ -101,3 +101,31 @@ main:
 
 .section .note.GNU-stack,"",@progbits
 ```
+
+Can we go further and make our code run without glibc? Of course! Compile the
+code below with `gcc -nostdlib hello_sys_st.S -o hello_sys_st`.
+```
+// hello_sys_st.S
+
+.section .rodata
+.mystr:
+	.string "Hello World!\n"
+.text
+.globl _start
+_start:
+	mov $13, %rdx
+	lea .mystr(%rip), %rsi
+	mov $0, %rdi // fd=0: stdout
+	mov $1, %rax // sys_write
+	syscall
+	mov $0, %rdi
+	mov $60, %rax // sys_exit
+	syscall
+
+.section .note.GNU-stack,"",@progbits
+```
+However, as you probably have noticed above, `strlen` is a glibc function,
+without glibc, you need to either hardcode the string length, or implement
+your own `strlen`. Calling `sys_exit` is also necessary as there is no code
+taking over control after `_start` returns, which would cause a Segmentation fault,
+if not handled.
